@@ -38,6 +38,12 @@ try:
         AFORCE_SUB_CHANNELS.append(int(x))
 except ValueError:
         raise Exception("Your Channel list does not contain valid integers.")
+try:   
+    FORCE_SUB_CHANNELS2=[]
+    for x in (os.environ.get("FORCE_SUB_CHANNELS", "").split()):
+        AFORCE_SUB_CHANNELS.append(int(x))
+except ValueError:
+        raise Exception("Your Channel list does not contain valid integers.")
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
